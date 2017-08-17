@@ -25,7 +25,7 @@ articleView.handleAuthorFilter = function() {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
-      $(`article[data-author="${$(this).val()}"]`).fadeIn();
+      $(`article[data-author="${$(this).val().split(' ')[0]}"]`).fadeIn();
     } else {
       $('article').fadeIn();
       $('article.template').hide();
